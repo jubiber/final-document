@@ -38,3 +38,51 @@ class FlyingSquirrel extends Mammal {
 $WhaleInstance = new Whale();
 
 $WhaleInstance->breath();
+
+
+
+class Fish {
+    protected $name;
+    protected $residence;
+
+    //생성자
+    public function __construct(string $name, string $residence) {
+        $this->name = $name;
+        $this->residence = $residence;
+    }
+    final public function breath() {
+        echo $this->name."는 아가미 호흡을 합니다.\n";
+    }
+    public function swimming() {
+        echo $this->name."가 헤엄을 칩니다.\n";
+    }
+}
+
+class Saba extends Fish {
+    
+}
+
+class flyingFish extends Fish {
+    public function flying() {
+        echo $this->name."가 날아갑니다.\n";
+    }
+    // protected $name;
+    // protected $residence;
+
+    //  public function __construct(string $name, string $residence) {
+    //     $this->name = $name;
+    //     $this->residence = $residence;
+    // }
+    // final public function breath() {
+    //     echo $this->name."는 아가미 호흡을 합니다.\n";
+    // }
+    // public function swimming() {
+    //     echo $this->name."가 헤엄을 칩니다.\n";
+    // }
+    // public function flying() {
+    //     echo $this->name."가 날아갑니다.\n";
+    // }
+}
+
+$sabaInstance = new Saba("고등어", "바다");
+$sabaInstance->breath();
